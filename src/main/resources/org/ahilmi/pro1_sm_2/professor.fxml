@@ -10,15 +10,15 @@
         <Label layoutX="37.0" layoutY="36.0" text="ID:" />
         <Label layoutX="26.0" layoutY="81.0" text="Name:" />
         <Label layoutX="5.0" layoutY="127.0" text="Department:" />
-        <TextField fx:id="ProfessorId" layoutX="73.0" layoutY="32.0" />
-        <TextField fx:id="ProfessorName" layoutX="73.0" layoutY="77.0" />
-        <TextField fx:id="ProfessorDepartment" layoutX="73.0" layoutY="123.0" />
+        <TextField fx:id="professorId" layoutX="73.0" layoutY="32.0" />
+        <TextField fx:id="professorName" layoutX="73.0" layoutY="77.0" />
+        <TextField fx:id="professorDepartment" layoutX="73.0" layoutY="123.0" />
 
-        <Button fx:id="getProfessor" layoutX="258.0" layoutY="33.0" mnemonicParsing="false" text="GET" />
-        <Button fx:id="clearProfessor" layoutX="258.0" layoutY="99.0" mnemonicParsing="false" text="CLEAR" />
-        <Button fx:id="saveProfessor" layoutX="30.0" layoutY="190.0" mnemonicParsing="false" text="SAVE" />
-        <Button fx:id="deleteProfessor" layoutX="95.0" layoutY="190.0" mnemonicParsing="false" text="DELETE" />
-        <Button fx:id="updateProfessor" layoutX="169.0" layoutY="190.0" mnemonicParsing="false" text="UPDATE" />
-        <Button fx:id="closeProfessor" layoutX="269.0" layoutY="190.0" mnemonicParsing="false" text="CLOSE" />
+        <Button fx:id="getProfessor" layoutX="258.0" layoutY="33.0" mnemonicParsing="false" onAction="#getProfessor" text="GET" />
+        <Button fx:id="clearProfessor" layoutX="258.0" layoutY="99.0" mnemonicParsing="false" onAction="#clearProfessor" text="CLEAR" />
+        <Button fx:id="saveProfessor" layoutX="30.0" layoutY="190.0" mnemonicParsing="false" onAction="#saveProfessor" text="SAVE" />
+        <Button fx:id="deleteProfessor" layoutX="95.0" layoutY="190.0" mnemonicParsing="false" onAction="#deleteProfessor" text="DELETE" />
+        <Button fx:id="updateProfessor" layoutX="169.0" layoutY="190.0" mnemonicParsing="false" onAction="#updateProfessor" text="UPDATE" />
+        <Button fx:id="closeProfessor" layoutX="269.0" layoutY="190.0" mnemonicParsing="false" onAction="#closeProfessor" text="CLOSE" />
     </children>
 </AnchorPane>

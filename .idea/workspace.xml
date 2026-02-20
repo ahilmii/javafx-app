@@ -6,8 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="42b4da86-6f8e-4375-9f2a-08bf11c884a2" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ahilmi/pro1_sm_2/db/CourseCrudOperations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ahilmi/pro1_sm_2/db/CourseCrudOperations.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ahilmi/pro1_sm_2/db/ProfessorCrudOperations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ahilmi/pro1_sm_2/db/ProfessorCrudOperations.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ahilmi/pro1_sm_2/Controller/ProfessorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ahilmi/pro1_sm_2/Controller/ProfessorController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/org/ahilmi/pro1_sm_2/professor.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/ahilmi/pro1_sm_2/professor.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +83,7 @@
       <workItem from="1771500307269" duration="2933000" />
       <workItem from="1771563843498" duration="2787000" />
       <workItem from="1771571327869" duration="9108000" />
-      <workItem from="1771595166954" duration="5580000" />
+      <workItem from="1771595166954" duration="7773000" />
     </task>
     <servers />
   </component>
@@ -110,7 +110,13 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="true" />
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
