@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="248.0" prefWidth="338.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.ahilmi.pro1_sm_2.Controller.CourseController">
+    <children>
+        <Label layoutX="37.0" layoutY="36.0" text="ID:" />
+        <Label layoutX="26.0" layoutY="81.0" text="Name:" />
+        <Label layoutX="26.0" layoutY="127.0" text="Credit:" />
+        <TextField fx:id="courseId" layoutX="73.0" layoutY="32.0" />
+        <TextField fx:id="courseName" layoutX="73.0" layoutY="77.0" />
+        <TextField fx:id="courseCredit" layoutX="73.0" layoutY="123.0" />
+        <Button fx:id="getCourse" layoutX="258.0" layoutY="33.0" mnemonicParsing="false" onAction="#getCourse" text="GET" />
+        <Button fx:id="clearCourse" layoutX="258.0" layoutY="99.0" mnemonicParsing="false" onAction="#clearCourse" text="CLEAR" />
+        <Button fx:id="saveCourse" layoutX="18.0" layoutY="190.0" mnemonicParsing="false" onAction="#saveCourse" text="SAVE" />
+        <Button fx:id="closeCourse" layoutX="269.0" layoutY="190.0" mnemonicParsing="false" onAction="#closeCourse" text="CLOSE" />
+        <Button fx:id="deleteCourse" layoutX="95.0" layoutY="190.0" mnemonicParsing="false" onAction="#deleteCourse" text="DELETE" />
+        <Button fx:id="updateCourse" layoutX="169.0" layoutY="190.0" mnemonicParsing="false" onAction="#updateCourse" text="UPDATE" />
+
+    </children>
+</AnchorPane>
