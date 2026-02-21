@@ -42,6 +42,7 @@ public class CourseCrudOperations {
         try (Connection connection = DriverManager.getConnection(DB_URL, USER, PASS)) {
             Statement statement = connection.createStatement();
             String params = course.getId() + ", \'" + course.getName() + "\',\'" + course.getCredit() + "\'";
+
             // Check if there exist a record on that id
             if(getCourseById(course.getId()).isPresent()) {
                 result = -1;

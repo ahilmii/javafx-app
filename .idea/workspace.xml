@@ -6,8 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="42b4da86-6f8e-4375-9f2a-08bf11c884a2" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ahilmi/pro1_sm_2/Controller/ProfessorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ahilmi/pro1_sm_2/Controller/ProfessorController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/org/ahilmi/pro1_sm_2/professor.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/ahilmi/pro1_sm_2/professor.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ahilmi/pro1_sm_2/db/CourseCrudOperations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ahilmi/pro1_sm_2/db/CourseCrudOperations.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ahilmi/pro1_sm_2/db/TeachesCrudOperations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ahilmi/pro1_sm_2/db/TeachesCrudOperations.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ahilmi/pro1_sm_2/dto/Teaches.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ahilmi/pro1_sm_2/dto/Teach.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,23 +47,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.HelloApplication.executor": "Run",
-    "Application.Launcher.executor": "Run",
-    "Application.SM_Application.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.keymap",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Launcher.executor&quot;: &quot;Run&quot;,
+    &quot;Application.SM_Application.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -83,7 +84,8 @@
       <workItem from="1771500307269" duration="2933000" />
       <workItem from="1771563843498" duration="2787000" />
       <workItem from="1771571327869" duration="9108000" />
-      <workItem from="1771595166954" duration="7773000" />
+      <workItem from="1771595166954" duration="7782000" />
+      <workItem from="1771647608312" duration="6065000" />
     </task>
     <servers />
   </component>

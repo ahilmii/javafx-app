@@ -2,18 +2,18 @@ package org.ahilmi.pro1_sm_2.dto;
 
 import java.time.LocalDate;
 
-public class Teaches {
+public class Teach {
 
-    private int courseId;       // teaches.courses_id
-    private int professorId;    // teaches.professor_id
+    private int courseId;       // teach.courses_id
+    private int professorId;    // teach.professor_id
     private LocalDate startDate;
     private LocalDate endingDate;
     private int studentCount;
 
-    public Teaches() {
+    public Teach() {
     }
 
-    public Teaches(int courseId, int professorId, LocalDate startDate, LocalDate endingDate, int studentCount) {
+    public Teach(int courseId, int professorId, LocalDate startDate, LocalDate endingDate, int studentCount) {
         this.courseId = courseId;
         this.professorId = professorId;
         this.startDate = startDate;
@@ -38,7 +38,7 @@ public class Teaches {
 
     @Override
     public String toString() {
-        return "Teaches{" +
+        return "Teach{" +
                 "courseId=" + courseId +
                 ", professorId=" + professorId +
                 ", startDate=" + startDate +
