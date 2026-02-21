@@ -91,6 +91,16 @@ public class TeachController {
             alert.setTitle("Error");
             alert.setHeaderText("There is a teach with the same data: " + professorId.getText() +  "\r\n" + courseId.getText() + "\r\n" + startingDate.getText());
             alert.showAndWait();
+        } else if (res == -2) {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Foreign Key Error");
+            alert.setHeaderText("Course ID " + teach.getCourseId() + " does not exist in the database!");
+            alert.showAndWait();
+        } else if (res == -3) {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Foreign Key Error");
+            alert.setHeaderText("Professor ID " + teach.getProfessorId() + " does not exist in the database!");
+            alert.showAndWait();
         } else {
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Error");
@@ -188,6 +198,16 @@ public class TeachController {
             alert.setHeaderText("Teaching data with id " + professorId.getText() + " and " + courseId.getText() + " and " + startingDate.getText() + " updated");
             alert.showAndWait();
             clearTeach(event);
+        } else if (res == -2) {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Foreign Key Error");
+            alert.setHeaderText("Course ID " + teach.getCourseId() + " does not exist in the database!");
+            alert.showAndWait();
+        } else if (res == -3) {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Foreign Key Error");
+            alert.setHeaderText("Professor ID " + teach.getProfessorId() + " does not exist in the database!");
+            alert.showAndWait();
         } else {
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Error");

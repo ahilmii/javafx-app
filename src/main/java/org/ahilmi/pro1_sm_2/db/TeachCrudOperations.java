@@ -20,7 +20,6 @@ public class TeachCrudOperations {
             Statement statement = connection.createStatement();
             String query = "SELECT * FROM teaches WHERE professor_id = " + professor_id + " AND course_id = " + course_id + " AND start_date = '" + start_date + "';"; // SQL doğru mu
             ResultSet resultSet = statement.executeQuery(query);
-
             while (resultSet.next()) {
                 teach = new Teach();
 
@@ -48,13 +47,20 @@ public class TeachCrudOperations {
     public int insertTeachById(Teach teach) {
         int result = 0;
         try (Connection connection = DriverManager.getConnection(DB_URL, USER, PASS)) {
-            Statement statement = connection.createStatement();
 
+            if (!isParentExists(connection, "courses", teach.getCourseId())) {
+                return -2; // we are checking courses table to be sure about there is an id in courses table that matches with user typed (course_id).
+            }
+
+            if (!isParentExists(connection, "professors", teach.getProfessorId())) {
+                return -3;
+            }
+
+
+            Statement statement = connection.createStatement();
             String startDateFormatted = "'" + teach.getStartDate() + "'";
             String endDateFormatted = (teach.getEndingDate() == null) ? "NULL" : "'" + teach.getEndingDate() + "'";
 
-
-            // Params dizisini düzeltiyoruz
             String params = teach.getProfessorId() + ", " +
                             teach.getCourseId() + ", " +
                             teach.getStudentCount() + ", " +
@@ -63,7 +69,7 @@ public class TeachCrudOperations {
 
             // Check if there exists a record on that id
             if(getTeachById(teach.getProfessorId(), teach.getCourseId(), teach.getStartDate()).isPresent()) {
-                result = -1;
+                result = -1; // this record already exists in db
             } else {
                 String query = "INSERT INTO teaches (professor_id, course_id, student_count, start_date, ending_date) VALUES (" + params + ");";
                 result = statement.executeUpdate(query);
@@ -93,8 +99,17 @@ public class TeachCrudOperations {
     public int updateTeachById(Teach teach) {
         int result = 0;
         try (Connection connection = DriverManager.getConnection(DB_URL, USER, PASS)) {
-            Statement statement = connection.createStatement();
 
+
+            if (!isParentExists(connection, "courses", teach.getCourseId())) {
+                return -2; // we are checking courses table to be sure about there is an id in courses table that matches with user typed (course_id).
+            }
+
+            if (!isParentExists(connection, "professors", teach.getProfessorId())) {
+                return -3;
+            }
+
+            Statement statement = connection.createStatement();
             // Check if there exist a record on that id
             if(getTeachById(teach.getProfessorId(), teach.getCourseId(), teach.getStartDate()).isPresent()) {
 
@@ -117,12 +132,13 @@ public class TeachCrudOperations {
     }
 
 
-
-
-
-
-
-
+    // this method is used to handle foreign key constraints errors.
+    private boolean isParentExists(Connection connection, String tableName, int id) throws SQLException {
+        Statement statement = connection.createStatement();
+        String query = "SELECT id FROM " + tableName + " WHERE id = " + id;
+        ResultSet rs = statement.executeQuery(query);
+        return rs.next(); // if there is a record returns true
+    }
 
 
 

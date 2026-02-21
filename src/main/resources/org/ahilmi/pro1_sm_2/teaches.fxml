@@ -17,8 +17,8 @@
         <TextField fx:id="courseId" layoutX="108.0" layoutY="77.0" />
         <TextField fx:id="professorId" layoutX="108.0" layoutY="32.0" />
         <TextField fx:id="studentCount" layoutX="108.0" layoutY="200.0" />
-        <TextField fx:id="endingDate" layoutX="108.0" layoutY="164.0" />
-        <TextField fx:id="startingDate" layoutX="108.0" layoutY="123.0" />
+        <TextField fx:id="endingDate" layoutX="108.0" layoutY="164.0" promptText="YYYY-MM-DD"/>
+        <TextField fx:id="startingDate" layoutX="108.0" layoutY="123.0" promptText="YYYY-MM-DD"/>
 
 
         <Button fx:id="getTeach" layoutX="302.0" layoutY="32.0" mnemonicParsing="false" onAction="#getTeach" text="GET" />
