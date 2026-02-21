@@ -1,14 +1,13 @@
 package org.ahilmi.pro1_sm_2.db;
 
 
-import org.ahilmi.pro1_sm_2.dto.Course;
 import org.ahilmi.pro1_sm_2.dto.Teach;
 
 import java.sql.*;
 import java.time.LocalDate;
 import java.util.Optional;
 
-public class TeachesCrudOperations {
+public class TeachCrudOperations {
 
     static final String DB_URL = "jdbc:postgresql://localhost:5432/pro1_sm";
     static final String USER = "postgres";
