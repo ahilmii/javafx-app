@@ -38,14 +38,33 @@ public class TeachController {
     private Button updateTeach;
 
 
-    public void checkId(String profId, String courseId, ActionEvent event) {
-        if ( (profId.isEmpty() || Integer.parseInt(profId) <= 0) && (courseId.isEmpty() || Integer.parseInt(courseId) <= 0)  ) {
+    public boolean isValid(String profId, String courseId, String startDateStr, ActionEvent event) {
+
+        if (profId.isEmpty() || courseId.isEmpty() || startDateStr.isEmpty()) { // if any of these areas is empty then it will generate an error return false
+            Alert alert = new Alert(Alert.AlertType.ERROR); // this is how, we force user to fill in all required area to make an action
+            alert.setTitle("Error");
+            alert.setHeaderText("Professor ID, Course ID and Starting Date cannot be empty!");
+            alert.showAndWait();
+            return false;
+        }
+
+        try { // number checking
+            if (Integer.parseInt(profId) <= 0 || Integer.parseInt(courseId) <= 0) {
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setTitle("Error");
+                alert.setHeaderText("IDs must be positive numbers!");
+                alert.showAndWait();
+                return false;
+            }
+        } catch (NumberFormatException e) {
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Error");
-            alert.setHeaderText("Id is wrong!");
+            alert.setHeaderText("IDs must be numbers!");
             alert.showAndWait();
-            clearTeach(event);
+            return false;
         }
+
+        return true;
     }
 
     public void closeTeach(ActionEvent event) {
@@ -63,7 +82,9 @@ public class TeachController {
 
     @FXML
     void saveTeach(ActionEvent event) {
-        checkId(professorId.getText(), courseId.getText(), event);
+        if (!isValid(professorId.getText(), courseId.getText(), startingDate.getText(), event)) {
+            return;
+        }
         Teach teach = new Teach();
 
         teach.setProfessorId(Integer.parseInt(professorId.getText()));
@@ -111,7 +132,9 @@ public class TeachController {
 
     @FXML
     void deleteTeach(ActionEvent event) {
-        checkId(professorId.getText(), courseId.getText(), event);
+        if (!isValid(professorId.getText(), courseId.getText(), startingDate.getText(), event)) {
+            return;
+        }
         TeachCrudOperations crudOperations = new TeachCrudOperations();
 
         int prof_id = Integer.parseInt(professorId.getText());
@@ -143,7 +166,9 @@ public class TeachController {
 
     @FXML
     void getTeach(ActionEvent event) {
-        checkId(professorId.getText(), courseId.getText(), event);
+        if (!isValid(professorId.getText(), courseId.getText(), startingDate.getText(), event)) {
+            return;
+        }
         TeachCrudOperations crudOperations = new TeachCrudOperations();
 
         int prof_id = Integer.parseInt(professorId.getText());
@@ -157,7 +182,7 @@ public class TeachController {
             startingDate.setText(teach.get().getStartDate().toString());
 
             if (teach.get().getEndingDate() != null) {
-                endingDate.setText(teach.get().getEndingDate().toString()); // when we try to run this code without checking null possibility program still works but seems no problem but method doesn't work
+                endingDate.setText(teach.get().getEndingDate().toString()); // when we try to run this code without checking null possibility, program still works but seems no problem but method doesn't work
                                                                             // if endingdate value is null in a record, toString() tries to convert null into string and it throws error.
             } else {
                 endingDate.setText("");
@@ -175,7 +200,9 @@ public class TeachController {
 
     @FXML
     void updateTeach(ActionEvent event) {
-        checkId(professorId.getText(), courseId.getText(), event);
+        if (!isValid(professorId.getText(), courseId.getText(), startingDate.getText(), event)) {
+            return;
+        }
         Teach teach = new Teach();
 
         teach.setProfessorId(Integer.parseInt(professorId.getText()));

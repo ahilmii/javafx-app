@@ -6,9 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="42b4da86-6f8e-4375-9f2a-08bf11c884a2" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ahilmi/pro1_sm_2/Controller/CourseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ahilmi/pro1_sm_2/Controller/CourseController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/ahilmi/pro1_sm_2/Controller/TeachController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ahilmi/pro1_sm_2/Controller/TeachController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ahilmi/pro1_sm_2/db/TeachCrudOperations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ahilmi/pro1_sm_2/db/TeachCrudOperations.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/org/ahilmi/pro1_sm_2/teaches.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/ahilmi/pro1_sm_2/teaches.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,7 +33,7 @@
     </option>
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
+    <option name="selectedTabId" value="ProjectErrors" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
@@ -87,7 +86,8 @@
       <workItem from="1771595166954" duration="7782000" />
       <workItem from="1771647608312" duration="7246000" />
       <workItem from="1771655361664" duration="3526000" />
-      <workItem from="1771668414684" duration="4598000" />
+      <workItem from="1771668414684" duration="5549000" />
+      <workItem from="1771870489344" duration="5797000" />
     </task>
     <servers />
   </component>

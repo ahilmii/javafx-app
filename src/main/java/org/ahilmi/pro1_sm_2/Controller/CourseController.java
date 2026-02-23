@@ -8,6 +8,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import org.ahilmi.pro1_sm_2.db.CourseCrudOperations;
 
+import java.time.LocalDate;
 import java.util.Optional;
 
 public class CourseController {
@@ -48,6 +49,29 @@ public class CourseController {
         }
     }
 
+    public boolean isValid(String id, String name, String credit) {
+        if (id.isEmpty() || name.isEmpty() || credit.isEmpty()) {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Error");
+            alert.setHeaderText("ID, Name, and Credit fields cannot be empty!");
+            alert.showAndWait();
+            return false;
+        }
+        try {
+            Integer.parseInt(id);
+            Integer.parseInt(credit);
+        } catch (NumberFormatException e) {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Error");
+            alert.setHeaderText("ID and Credit must be numbers!");
+            alert.showAndWait();
+            return false;
+        }
+        return true;
+    }
+
+
+
     @FXML
     public void closeCourse(ActionEvent event) {Platform.exit();}
 
@@ -63,7 +87,9 @@ public class CourseController {
     // gui'dan aldığım veri ile course nesnesini dolduruyorum, bu nesnesyi db'ye gönderip işleyeceğim, dönen sonuca göre işlem yapacağım
     @FXML
     void saveCourse(ActionEvent event) {
-        checkId(courseId.getText(), event);
+        if (!isValid(courseId.getText(), courseName.getText(), courseCredit.getText())) { // if any of these inputs is empty, we will not allow the program to save it.
+            return;                                                                       // to create a course, all areas must be filled in.
+        }
         Course course = new Course();
 
         course.setId(Integer.parseInt(courseId.getText()));
