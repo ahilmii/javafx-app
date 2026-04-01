@@ -6,8 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="42b4da86-6f8e-4375-9f2a-08bf11c884a2" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ahilmi/pro1_sm_2/Controller/CourseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ahilmi/pro1_sm_2/Controller/CourseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ahilmi/pro1_sm_2/Controller/TeachController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ahilmi/pro1_sm_2/Controller/TeachController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ahilmi/pro1_sm_2/Controller/ProfessorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ahilmi/pro1_sm_2/Controller/ProfessorController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ahilmi/pro1_sm_2/db/CourseCrudOperations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ahilmi/pro1_sm_2/db/CourseCrudOperations.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/org/ahilmi/pro1_sm_2/course.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/ahilmi/pro1_sm_2/course.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/org/ahilmi/pro1_sm_2/professor.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/ahilmi/pro1_sm_2/professor.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/org/ahilmi/pro1_sm_2/sm-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/ahilmi/pro1_sm_2/sm-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/org/ahilmi/pro1_sm_2/teaches.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/ahilmi/pro1_sm_2/teaches.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,7 +37,7 @@
     </option>
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
@@ -59,7 +63,7 @@
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.IDE.editor.colors&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -87,7 +91,11 @@
       <workItem from="1771647608312" duration="7246000" />
       <workItem from="1771655361664" duration="3526000" />
       <workItem from="1771668414684" duration="5549000" />
-      <workItem from="1771870489344" duration="5797000" />
+      <workItem from="1771870489344" duration="5925000" />
+      <workItem from="1771914099937" duration="6727000" />
+      <workItem from="1772130136420" duration="470000" />
+      <workItem from="1772780717390" duration="282000" />
+      <workItem from="1772877152850" duration="6000" />
     </task>
     <servers />
   </component>

@@ -6,9 +6,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
-import org.ahilmi.pro1_sm_2.db.CourseCrudOperations;
 import org.ahilmi.pro1_sm_2.db.ProfessorCrudOperations;
-import org.ahilmi.pro1_sm_2.dto.Course;
 import org.ahilmi.pro1_sm_2.dto.Professor;
 
 import java.util.Optional;
@@ -51,6 +49,29 @@ public class ProfessorController {
         }
     }
 
+    public boolean isValid(String id, String name, String department) {
+        if (id.isEmpty() || name.isEmpty() || department.isEmpty()) {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Error");
+            alert.setHeaderText("ID, Name, and Department fields cannot be empty!");
+            alert.showAndWait();
+            return false;
+        }
+        try {
+            Integer.parseInt(id);
+        } catch (NumberFormatException e) {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Error");
+            alert.setHeaderText("ID must be a number!");
+            alert.showAndWait();
+            return false;
+        }
+        return true;
+    }
+
+
+
+
     public void closeProfessor(ActionEvent event) {Platform.exit();}
 
     public void clearProfessor(ActionEvent event) {
@@ -59,7 +80,10 @@ public class ProfessorController {
         professorDepartment.setText("");}
 
     public void saveProfessor(ActionEvent event) {
-        checkId(professorId.getText(), event);
+        if (!isValid(professorId.getText(), professorName.getText(), professorDepartment.getText())) { // if any of these inputs is empty, we will not allow the program to save it.
+            return;                                                                       // to create a course, all areas must be filled in.
+        }
+
         Professor professor = new Professor();
 
         professor.setId(Integer.parseInt(professorId.getText()));

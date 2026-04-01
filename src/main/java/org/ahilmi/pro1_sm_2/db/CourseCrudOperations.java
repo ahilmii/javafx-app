@@ -62,7 +62,7 @@ public class CourseCrudOperations {
         int result = 0;
         try (Connection connection = DriverManager.getConnection(DB_URL, USER, PASS)) {
             Statement statement = connection.createStatement();
-            String query = "DELETE FROM courses WHERE id = " + id; // TABLO İSMİ
+            String query = "DELETE FROM courses WHERE id = " + id + ";";
             result = statement.executeUpdate(query);
         } catch (Exception e){
             throw new RuntimeException(e);
